@@ -1,0 +1,11 @@
+
+> client@ dev /home/zak/work/hbc/pres/cards/client
+> vite "--host" "0.0.0.0"
+
+
+  VITE v5.4.21  ready in 74 ms
+
+  ➜  Local:   http://localhost:5173/
+  ➜  Network: http://192.168.1.17:5173/
+  ➜  Network: http://192.168.1.29:5173/
+  ➜  press h + enter to show help

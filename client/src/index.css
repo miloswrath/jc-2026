@@ -1,0 +1,86 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --ink: 11 10 16;
+  --panel: 21 19 29;
+  --cream: 243 239 230;
+  --sand: 242 195 107;
+}
+
+body {
+  margin: 0;
+  font-family: "Space Grotesk", "Sora", "Avenir Next", system-ui, sans-serif;
+  background-color: rgb(var(--ink));
+  background-image: radial-gradient(
+      circle at top right,
+      rgb(var(--sand) / 0.2),
+      transparent 55%
+    ),
+    radial-gradient(
+      circle at 20% 20%,
+      rgb(var(--cream) / 0.08),
+      transparent 45%
+    );
+  color: rgb(var(--cream));
+  min-height: 100vh;
+}
+
+.animate-rise {
+  animation: rise 0.6s ease both;
+}
+
+.animate-fade {
+  animation: fade 0.4s ease both;
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.reveal-write {
+  animation: reveal-write 1.8s ease both;
+  clip-path: inset(0 100% 0 0);
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+@keyframes reveal-write {
+  from {
+    clip-path: inset(0 100% 0 0);
+    opacity: 0.2;
+  }
+  to {
+    clip-path: inset(0 0 0 0);
+    opacity: 1;
+  }
+}
