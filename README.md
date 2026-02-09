@@ -76,6 +76,7 @@ your LAN IP address.
 ```sh
 HOST=0.0.0.0 PORT=8088 pnpm dev:server
 VITE_WS_URL=ws://<YOUR-LAN-IP>:8088 pnpm --filter client dev -- --host 0.0.0.0
+VITE_WS_URL=ws://172.17.7.90:8088 pnpm --filter client dev -- --host 0.0.0.0
 ```
 
 Presenter view (from another device):
